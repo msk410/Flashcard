@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main_menu" tools:context=".MainMenu">
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="단어장 모드"
+        android:id="@+id/menuFlashcardsButton"
+        android:layout_marginTop="177dp"
+        android:onClick="onMenuFlashcardsClick"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="퀴즈 모드"
+        android:id="@+id/menuQuizModeButton"
+        android:layout_below="@+id/menuFlashcardsButton"
+        android:layout_alignLeft="@+id/menuFlashcardsButton"
+        android:layout_alignStart="@+id/menuFlashcardsButton"
+        android:onClick="onMenuQuizModeClick" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="나가기"
+        android:id="@+id/menuQuitButton"
+        android:layout_below="@+id/button"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:onClick="onQuitClick" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="단어장 만들기"
+        android:id="@+id/button"
+        android:layout_below="@+id/menuQuizModeButton"
+        android:layout_alignLeft="@+id/menuQuizModeButton"
+        android:layout_alignStart="@+id/menuQuizModeButton"
+        android:onClick="onMenuCreateCardsClick" />
+</RelativeLayout>

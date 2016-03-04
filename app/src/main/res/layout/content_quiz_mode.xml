@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_quiz_mode"
+    tools:context="com.mikekim.poweruser.flashcard.QuizMode"
+    android:id="@+id/background">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/animalImage"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/scoreText2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/infoText"
+        android:layout_marginTop="91dp"
+        android:layout_below="@+id/koreanWord"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/guessTextfield"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:layout_below="@+id/infoText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="점수:"
+        android:id="@+id/scoreText2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="힌트:"
+        android:id="@+id/hintText"
+        android:layout_above="@+id/animalImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:layout_alignTop="@+id/scoreText2" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/koreanWord"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/scoreText2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="100dp" />
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guessTextfield">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="엔터"
+            android:id="@+id/enterButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="힌트"
+            android:id="@+id/hintButton"
+            android:layout_alignBottom="@+id/enterButton"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="넘어가기"
+            android:id="@+id/skipButton"
+            android:layout_alignTop="@+id/hintButton"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나가기"
+            android:id="@+id/quitButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/skipButton"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>
+
